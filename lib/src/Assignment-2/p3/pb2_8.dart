@@ -1,15 +1,9 @@
 
-num maxNumber(num a, num b, num c) {
-  if (a >= b && a >= c) {
-    return a;
-  } else if (b >= a && b >= c) {
-    return b;
-  } else {
-    return c;
-  }
+int add(int a, int b) {
+  return a + b;
 }
 
 void main() {
-  num result = maxNumber(10, 25, 15);
-  print('The largest number is: $result');
+  int sum = add(10, 20);
+  print("The sum is: $sum");
 }

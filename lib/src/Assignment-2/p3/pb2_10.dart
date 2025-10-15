@@ -3,9 +3,10 @@ bool isEven(int number) {
 }
 
 void main() {
-  int num1 = 10;
-  int num2 = 7;
-
-  print('$num1 is even? ${isEven(num1)}'); // true
-  print('$num2 is even? ${isEven(num2)}'); // false
+  int num = 10;
+  if (isEven(num)) {
+    print("$num is even");
+  } else {
+    print("$num is odd");
+  }
 }

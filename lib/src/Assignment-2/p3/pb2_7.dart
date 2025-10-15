@@ -1,15 +1,17 @@
 import 'dart:io';
 import 'dart:math';
-num add(num a, num b) {
-  return a + b;
+
+double calculatePower(double number, double powerOf) {
+  return pow(number, powerOf).toDouble();
 }
 
 void main() {
-    
-    print("Enter two numbers: ");
-    int? x = int.parse(stdin.readLineSync()!);
-    int? y = int.parse(stdin.readLineSync()!);
-    
-    num result = add(x, y);
-     print('The sum is: $result');
+  print("Enter the number: ");
+  double number = double.parse(stdin.readLineSync()!);
+
+  print("Enter the power: ");
+  double powerOf = double.parse(stdin.readLineSync()!);
+
+  double result = calculatePower(number, powerOf);
+  print("$number raised to the power $powerOf = $result");
 }

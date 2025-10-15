@@ -1,14 +1,12 @@
-import 'dart:io';
-double findArea(double radius) {
-  const double pi = 3.1416;
-  return pi * radius * radius;
+import 'dart:math';
+
+String generatePassword(int length) {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#\$%^&*()';
+  Random random = Random();
+  return List.generate(length, (index) => chars[random.nextInt(chars.length)]).join();
 }
 
 void main() {
-  print('Enter the radius of the circle:');
-  double radius = double.parse(stdin.readLineSync()!);
-
-  
-  double area = findArea(radius);
-  print('The area of the circle with radius $radius is $area');
+  String password = generatePassword(15);
+  print("Generated Password: $password");
 }

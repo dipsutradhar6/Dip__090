@@ -1,5 +1,5 @@
 printName(){
-    print("Dip Mia");
+    print("Dip");
 }
 void main() {
     printName();

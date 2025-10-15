@@ -1,13 +1,14 @@
 import 'dart:io';
+import 'dart:math';
 
-String reverseString(String input) {
-  return input.split('').reversed.join('');
+double areaa(double radius) {
+  return pi * radius * radius;
 }
 
 void main() {
-  
-  print('Enter a string:');
-  String str = stdin.readLineSync()!;
-  String reversed = reverseString(str);
-  print('Reversed string is: $reversed');
+  print("Enter the radius of the circle: ");
+  double radius = double.parse(stdin.readLineSync()!);
+
+  double area = areaa(radius);
+  print("The area of the circle is: $area");
 }

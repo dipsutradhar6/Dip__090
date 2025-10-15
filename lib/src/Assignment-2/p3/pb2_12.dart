@@ -1,15 +1,9 @@
-double calculateArea({double length = 1, double width = 1}) {
-  return length * width;
+double calcArea({double l = 1, double w = 1}) {
+  return l * w;
 }
 
 void main() {
-
-  double area1 = calculateArea(length: 5, width: 3);
-  print('Area of rectangle: $area1');
-
-  double area2 = calculateArea(length: 4);
-  print('Area of rectangle: $area2');
-
-  double area3 = calculateArea();
-  print('Area of rectangle: $area3');
+  print("Area with default values: ${calcArea()}");
+  print("Area of rectangle 5x3: ${calcArea(l: 5, w: 3)}");
+  print("Area with length 4 and default width: ${calcArea(l: 4)}");
 }
